@@ -1,0 +1,179 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        app:cardCornerRadius="@dimen/padding_low"
+        app:cardElevation="@dimen/activity_vertical_margin">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_high">
+
+            <LinearLayout
+                android:id="@+id/user_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_marginRight="@dimen/margin_base"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_name" />
+
+                <LinearLayout
+                    android:id="@+id/user_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_low"
+                        android:layout_marginTop="@dimen/margin_large"
+                        android:text="User Name"
+                        android:textSize="@dimen/font_Xlarge" />
+
+                    <TextView
+                        android:id="@+id/created_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_low"
+                        android:capitalize="sentences"
+                        android:text="Created on"
+                        android:textSize="@dimen/font_medium" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/story_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/story_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_low"
+                    android:layout_marginTop="@dimen/margin_low"
+                    android:text="Title"
+                    android:textSize="@dimen/font_XXlarge" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_low"
+                    android:textSize="@dimen/font_medium"
+                    tools:text="Celebrating Black Friday in this lovely black cut out romper and floral accessories. I love black and i think it is the easiest thing to wear when i am in doubt. So a black romper solves my dilemma of what to wear when i am short of time to decide and outfit. When you wear black add some fun accessories to keep the outfit fun and lively." />
+
+                <ImageView
+                    android:id="@+id/storyImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_layout"
+                    android:adjustViewBounds="true"
+                    android:gravity="top"
+                    android:paddingLeft="@dimen/padding_base"
+                    android:paddingTop="@dimen/padding_base"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/test"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/action_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/story_layout"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_thumb_up_black_24dp"
+                    tools:text="109 Likes" />
+
+                <TextView
+                    android:id="@+id/comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:src="@drawable/ic_comment_black_24dp"
+                    tools:text="109 Comments" />
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/action_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/action_layout"
+                android:layout_marginTop="@dimen/margin_low"
+                android:gravity="center"
+
+                >
+
+
+                <ImageButton
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_thumb_up_black_24dp"
+                    android:text="Like"
+
+                    />
+
+                <ImageButton
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_toRightOf="@id/like"
+                    android:background="@color/white"
+                    android:drawableRight="@drawable/ic_comment_black_24dp"
+                    android:src="@drawable/ic_comment_black_24dp"
+                    android:text="Comment" />
+
+
+                <Button
+                    android:id="@+id/follow_Button"
+                    style="@style/ButtonTheme"
+                    android:text="Follow"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</ScrollView>
